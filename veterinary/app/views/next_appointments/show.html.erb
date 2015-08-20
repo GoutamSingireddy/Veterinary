@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date of appointment:</strong>
+  <%= @next_appointment.date_of_appointment %>
+</p>
+
+<p>
+  <strong>Reason for visit:</strong>
+  <%= @next_appointment.reason_for_visit %>
+</p>
+
+<p>
+  <strong>Appointment:</strong>
+  <%= @next_appointment.appointment_id %>
+</p>
+
+<%= link_to 'Edit', edit_next_appointment_path(@next_appointment) %> |
+<%= link_to 'Back', next_appointments_path %>

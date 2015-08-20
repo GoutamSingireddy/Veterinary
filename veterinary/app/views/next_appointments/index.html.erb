@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Next Appointments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date of appointment</th>
+      <th>Reason for visit</th>
+      <th>Appointment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @next_appointments.each do |next_appointment| %>
+      <tr>
+        <td><%= next_appointment.date_of_appointment %></td>
+        <td><%= next_appointment.reason_for_visit %></td>
+        <td><%= next_appointment.appointment_id %></td>
+        <td><%= link_to 'Show', next_appointment %></td>
+        <td><%= link_to 'Edit', edit_next_appointment_path(next_appointment) %></td>
+        <td><%= link_to 'Destroy', next_appointment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Next appointment', new_next_appointment_path %>
